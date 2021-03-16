@@ -4,6 +4,8 @@ const url = "https://rickandmortyapi.com/api/character";
 let ignition = document.querySelector("#ignition");
 let container = document.querySelector(".container");
 let height = 0;
+let secondPage = "";
+let allData = {};
 //Functions
 function getData() {
   fetch(url)
@@ -11,6 +13,18 @@ function getData() {
       return result.json();
     })
     .then((data) => {
+      console.log(data);
+      fetch(data.info.next)
+        .then((result) => {
+          return result.json();
+        })
+        .then((data) => {
+          console.log(data);
+          for (let per of data.results) {
+            const { name, image } = per;
+            displayData(name, image);
+          }
+        });
       for (let per of data.results) {
         const { name, image } = per;
         displayData(name, image);
@@ -25,7 +39,7 @@ function displayData(name, img) {
   container.appendChild(div);
   div.addEventListener("click", (e) => {
     height += 475;
-    if (height > 9000) height = 0;
+    if (height > 18700) height = 0;
     container.style.transition = "all cubic-bezier(.15,-0.7,.83,.67) 1s";
     container.style.transform = `translateY(-${height}px)`;
   });
