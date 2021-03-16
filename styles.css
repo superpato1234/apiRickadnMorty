@@ -1,5 +1,8 @@
-*{
-    
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Rock Salt', cursive;
 }
 section{
     font-family: Avenir;
@@ -21,7 +24,15 @@ section{
     margin: 0 0 200px 0;
     cursor: pointer;
 }
-
+h1{
+    font-family: 'Rock Salt', cursive;
+    font-size: 1rem;
+    border: 0;
+    padding: 0;
+}
+p{
+    font-family: 'Rock Salt', cursive;
+}
 .character:hover{
     box-shadow: 1px 1px 5px grey;
     transform: scale(.99);

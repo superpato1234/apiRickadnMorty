@@ -24,7 +24,7 @@ function displayData(name, img) {
   div.innerHTML = `<img src="${img}"/><p>${name}</p>`;
   container.appendChild(div);
   div.addEventListener("click", (e) => {
-    height += 455;
+    height += 475;
     if (height > 9000) height = 0;
     container.style.transition = "all cubic-bezier(.15,-0.7,.83,.67) 1s";
     container.style.transform = `translateY(-${height}px)`;
