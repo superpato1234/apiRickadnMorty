@@ -24,6 +24,18 @@ section{
     margin: 0 0 200px 0;
     cursor: pointer;
 }
+button{
+    background-color: gray;
+    color:white;
+    font-family: 'Rock Salt', cursive;
+    font-size: .8rem;
+    padding: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(.90);
+}
 h1{
     font-family: 'Rock Salt', cursive;
     font-size: 1rem;
